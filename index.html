@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="advice-container">
+      <div class="advice-header">
+        <p class="advice-header-text">
+          Advice #<span id="advice-number"></span>
+        </p>
+      </div>
+      <div class="advice-content">
+        <p class="advice-text" id="advice-text">
+          "It is easy to sit up and take notice, what's difficult is getting up
+          and taking action."
+        </p>
+        <img
+          src="images/pattern-divider-desktop.svg"
+          alt=""
+          class="pattern-divider"
+        />
+      </div>
+      <div class="advice-button">
+        <button
+          onclick="fetchData()"
+          class="advice-button-dice"
+          id="advice-button"
+        >
+          <img src="images/icon-dice.svg" alt="" />
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
