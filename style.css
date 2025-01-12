@@ -27,6 +27,7 @@ body {
   margin: 100px;
   position: absolute;
   border-radius: 8px;
+  max-width: 750px;
 }
 .advice-header {
   text-align: center;
@@ -34,6 +35,8 @@ body {
 }
 .advice-header-text {
   color: var(--clr-primary-600);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
 }
 .advice-content {
   text-align: center;
@@ -78,5 +81,8 @@ body {
   }
   .advice-text {
     font-size: 1.2rem;
+  }
+  .pattern-divider {
+    content: url(images/pattern-divider-mobile.svg);
   }
 }

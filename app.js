@@ -7,17 +7,20 @@ async function fetchData() {
       cache: "no-cache",
     });
     const data = await response.json();
-    console.log(data);
-    let returnedAdviceNumber = data.slip.id;
-    let returnedAdviceText = data.slip.advice;
-    adviceNumber.textContent = returnedAdviceNumber;
-    adviceText.textContent = returnedAdviceText;
+
     if (!response.ok) {
       throw new Error("Could not fetch username");
     }
+    return data;
   } catch (error) {
     console.error(error);
   }
 }
 
-fetchData();
+async function useData() {
+  let data = await fetchData();
+  adviceNumber.textContent = data.slip.id;
+  adviceText.textContent = data.slip.advice;
+}
+
+useData();
